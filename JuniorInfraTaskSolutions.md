@@ -15,3 +15,13 @@ Some of the challenges with Prometheus are:
 - If the clusters are dynamic or change, you often need to implement a way to automatically add datasources to Grafana every time you deploy a Prometheus in a cluster.
 - This allows us to mix in a dashboard panels from different sources, but we still can’t query services across different clusters and perform really global queries.
 - Controlling who is accessing what data becomes more important, and an RBAC system may be required. Integration with identity services is most likely necessary in order to keep the user base updated, and this might become a compliance requirement.
+
+# New Relic
+
+In addition to providing visibility into operational data—such as the number of resources used and namespaces per cluster and per pod—an important part of monitoring Kubernetes is having the ability to see the relationships between objects in a cluster using Kubernetes’ built-in labeling system.
+
+New Relic integrates with Kubernetes in a number of ways:
+
+- Google Kubernetes Engine (GKE): GKE provides an environment for deploying, managing, and scaling your containerized applications using Google-supplied infrastructure.
+
+To get started monitoring Kubernetes with New Relic, you’ll need to activate the Kubernetes integration by deploying the newrelic-infra agent onto your Kubernetes cluster. The New Relic Kubernetes integration brings in system-level metrics, allowing you to view, troubleshoot, and alert on the most important parts of your cluster. Use the integration’s out-of-the-box dashboard to inspect a single container, or scale up to see large, multi-cluster deployments across different Kubernetes entities, including nodes, pods, namespaces, and containers.
